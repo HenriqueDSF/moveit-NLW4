@@ -1,14 +1,18 @@
+import { useContext } from 'react';
+import { ChallengesContext } from '../contexts/ChallengesContext';
 import styles from '../styles/components/Profile.module.css';
 
 export function Profile() {
+    const { level} = useContext(ChallengesContext);
+
     return(
         <div className={styles.profileContainer}>
-            <img src="https://lh3.googleusercontent.com/-qaAot4LTlOE/Xzqfzurl10I/AAAAAAAAC4k/pk3PZfjg70ENWGEMYsMXdRfGCXZujUVNACEwYBhgLKtMDAL1Ocqw5mSwB7a6_A6BbJ07dgzwOHYLddwjP8cSXvVcJ53gm0TGUWg3BwrlnM7QH5rf5QWQQTNHjmmmi9QUzFR-tjS4di230midql5pirHw21A2vOzOFXAFZN79rqMWPPy_UWD_i-vhKVaswDn8gA6cugQycyRwL7FAfLh_HkqwDQJYEDIQfDeDq3HjvF-d2vW_27h_4QlQg5C7dPcHmQWUZ5vVb4T_Y3WWrehSgPL8Cx0Gv6SVSeQRiEhyo8seCrbYL7ZNorT2lzRncjhvkkWo8BdThUAZT049D8w3Y0-4_OLJAy5KEQ1O_KXhVyMgYo6zWFxK2M5IDYojmSLjSAlE1wmRWWdH3m4sCcPj4rtVoCsNkoKvBw6RokKJ1XAqmWxr9moMLbSyjI6zlujfgbv6Fs1I29a_ba9TNs9OSi_O1aZ2-v55dgFnR1AiuIwtsP6RbVb_OQ11lqTdLFcQ6rGVsYySMRVEKteksOl1S_38FdNS-6txffYMoMTpcgWsnJCNR8_KFB47iJNsbp00tspSVR3Xv-XbiqoWEJnYvu8Fb1RexiuIElxTDKDD9hirP-UXiKDLOlhNOk_DMbsMjwNsimrnmGU63jWf1nsf0rdAPRMAwypncgQY/w140-h140-p/69296816_108132020562949_5079011321026969600_o.jpg" alt="Henrique Farias" />
+            <img src="https://scontent.frvd2-1.fna.fbcdn.net/v/t1.0-9/69296816_108132020562949_5079011321026969600_o.jpg?_nc_cat=111&ccb=3&_nc_sid=09cbfe&_nc_eui2=AeHMlpAWs2BqqGvON3EsKgA3GOH5Wy36WXEY4flbLfpZcQ8aDgNGnZYBjtjDdzc0CN6NHqYFry1wDr3pnQRPGRgB&_nc_ohc=YIrVNxuRAI4AX_Vz6_v&_nc_oc=AQnOpXs-r3lVV74g2NXcWyzFAZAovLSGLOJqYqRFBg_JqM88JakFFBoWqGDIDuNLEV8&_nc_ht=scontent.frvd2-1.fna&oh=1d364ce63b64e19b9fa268cdc576e712&oe=6061145D" alt="Henrique Farias" />
             <div>
                 <strong>Henrique Farias</strong>
                 <p>
                     <img src="icons/level.svg" alt="Level" />
-                    Level 1
+                    Level {level}
                 </p>
             </div>
         </div>
